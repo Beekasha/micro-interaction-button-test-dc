@@ -33,6 +33,11 @@ button {
         left: .5em;
         z-index: -1; // move behind
         border-radius: .2em;
-
     }
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    clip-path: circle(0% at 50% 50%); //hides text
 }

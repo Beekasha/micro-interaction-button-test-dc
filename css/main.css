@@ -32,4 +32,9 @@ button {
     z-index: -1;
     border-radius: .2em; }
 
+p {
+  text-align: center;
+  font-weight: bold;
+  clip-path: circle(0% at 50% 50%); }
+
 /*# sourceMappingURL=main.css.map */
