@@ -35,8 +35,9 @@
             btn = document.querySelector('button');
             rule = CSSRulePlugin.getRule('button::before');
 
-        t1.to('.label', {opacity: 0, height: 0, position: 'absolute'})
+        t1.to('.label', {opacity: 0, height: 0, position: 'absolute', duration: '.2s'})
             .to('button', {borderRadius: '50%', width: '2.5em', height: '2.5em'}, '-=.5s')
+            .to(rule, {borderRadius: '50%'}, '-=1s')
         
     </script>
 </body>
