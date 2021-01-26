@@ -7,3 +7,32 @@ body {
     font-family: 'Poppins';
     height: 100vh;
 }
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    position: relative; //fixes problem in absolutely positioned relative in &before
+    padding: .5em 1em;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: .2em;
+    outline: none;
+    width: 10em;
+
+    &:before { //offsetting the background
+        position: absolute;
+        content: '';
+        background: #5000BB; //slightly darker than regular background
+        height: 100%;
+        width: 100%;
+        top: .5em;
+        left: .5em;
+        z-index: -1; // move behind
+        border-radius: .2em;
+
+    }
+}
