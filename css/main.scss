@@ -14,30 +14,38 @@ button {
     color: white;
     position: relative; //fixes problem in absolutely positioned relative in &before
     padding: .5em 1em;
-    font-weight: bold;
     font-size: 2em;
+    font-weight: bold;
     text-align: center;
     border: 2px solid white;
     cursor: pointer;
     border-radius: .2em;
     outline: none;
     width: 10em;
+    
 
     &:before { //offsetting the background
         position: absolute;
         content: '';
-        background: #5000BB; //slightly darker than regular background
+        background: #5000B8; //slightly darker than regular background
+        z-index: -1; // move behind
         height: 100%;
         width: 100%;
+        border-radius: .2em;
         top: .5em;
         left: .5em;
-        z-index: -1; // move behind
-        border-radius: .2em;
     }
+}
+
+svg {
+    position: absolute;
+    top: .7em;
+    left: .5em;
+    stroke-dasharray:0 103;
 }
 
 p {
     text-align: center;
     font-weight: bold;
-    clip-path: circle(0% at 50% 50%); //hides text
+    clip-path: circle(0% at 50% 50%);  //hides text
 }
